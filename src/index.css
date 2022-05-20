@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'Simpsons';
+    src: url('./assets/fonts/simpsons-font.ttf');
+  }
+  @font-face {
+    font-family: 'Comic Sans MS';
+    src: url('./assets/fonts/comic.ttf');
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
