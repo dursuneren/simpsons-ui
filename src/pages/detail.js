@@ -58,7 +58,7 @@ function Detail() {
           {/* Avatar */}
           <img
             className="mx-auto mb-10 w-50 h-75 rounded object-center"
-            src={simpson?.avatar.split(".png")[0] + ".png"}
+            src={simpson?.avatar.split("/revision")[0]}
             alt="Default avatar"
           />
           <h3 className="font-simpsons-font text-3xl ext-black-700 dark:text-gray-300">

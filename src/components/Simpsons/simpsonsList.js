@@ -43,7 +43,7 @@ function SimpsonsList() {
     <ol className="dark:text-gray-200">
       <li key="add-button">
         <button
-          className="w-full inline-flex items-center justify-center h-10 px-6 mb-5 font-comic dark:bg-amber-500 hover:dark:bg-amber-700 hover:bg-amber-500 bg-amber-400 text-gray-600 dark:text-gray-200  rounded-xl focus:shadow-outline hover:bg-indigo-800"
+          className="w-full inline-flex items-center justify-center h-10 px-6 mb-5 font-comic dark:bg-amber-500 hover:dark:bg-amber-700 hover:bg-amber-500 bg-amber-400 hover:bg-amber-600 text-gray-600 dark:text-gray-200  rounded-xl focus:shadow-outline hover:bg-indigo-800"
           onClick={() => navigate("/add")}
         >
           <p className="text-xl mr-2 font-bold">Add</p>

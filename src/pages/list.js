@@ -39,7 +39,7 @@ function List() {
 
   //If simpsons array is empty because of deletion, show warning for refetching or add new simpson
   useEffect(() => {
-    !simpsons.length &&
+    !simpsons?.length &&
       !simpsonsLoading &&
       toast.warn(
         "If you want to add a simpson, click on the 'Add +' button or refresh the page!",
@@ -62,7 +62,7 @@ function List() {
     <>
       <Header header="List" />
       <div>{simpsons && <SimpsonsList />}</div>
-      {!simpsons.length && !simpsonsLoading && <Error text="Data Not Found!" />}
+      {!simpsons?.length && !simpsonsLoading && <Error text="Data Not Found!" />}
       {simpsonsLoading && <Spinner />}
     </>
   );

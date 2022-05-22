@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from "react";
 
-const SimpsonsContext = createContext();
+const SimpsonsContext = createContext("");
 
 export const SimpsonsProvider = ({ children }) => {
   const [simpsons, setSimpsons] = useState([]);
@@ -38,9 +38,7 @@ export const useSimpsons = () => {
 
   //Checking if the context is defined
   if (!context) {
-    throw new Error(
-      "useSimpsons must be used within a SimpsonsContextProvider"
-    );
+    console.error("useSimpsons must be used within a SimpsonsContextProvider");
   }
 
   return context;

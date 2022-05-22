@@ -37,7 +37,7 @@ function Add() {
   };
 
   return (
-    <div>
+    <>
       <Formik
         initialValues={{ name: "", job: "", description: "", avatar: "" }}
         validationSchema={addSimpsonSchema}
@@ -62,7 +62,7 @@ function Add() {
           handleSubmit,
           isSubmitting,
         }) => (
-          <form className="w-full max-w-lg text-left" onSubmit={handleSubmit}>
+          <form className="w-full justify-center items-center p-5" onSubmit={handleSubmit}>
             {/* Name Surname */}
             <div className="flex flex-wrap mb-6">
               <label
@@ -165,7 +165,7 @@ function Add() {
           </form>
         )}
       </Formik>
-    </div>
+    </>
   );
 }
 
