@@ -38,7 +38,7 @@ export const useSimpsons = () => {
 
   //Checking if the context is defined
   if (!context) {
-    console.error("useSimpsons must be used within a SimpsonsContextProvider");
+    console.log("useSimpsons must be used within a SimpsonsContextProvider");
   }
 
   return context;

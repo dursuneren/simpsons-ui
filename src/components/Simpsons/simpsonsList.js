@@ -51,13 +51,13 @@ function SimpsonsList() {
         </button>
       </li>
       {[...simpsons].reverse().map((simpson, index) => (
-        <li key={simpson.id} className="mb-5">
+        <li key={simpson.id} className="mb-5" data-testid={simpson.id+"-test"}>
           <div className="grid grid-cols-4 items-center text-left p-3 border-solid border-2 shadow rounded-lg hover:bg-blue-100 hover:shadow-xl hover:dark:bg-blue-800">
             {/* Placement */}
             <p className="font-comic ml-5">{index + 1}</p>
             {/* Avatar */}
             <img
-              className="w-20 h-25 rounded"
+              className="h-24 rounded"
               src={simpson.avatar.split("/revision")[0]}
               alt="Default avatar"
             />

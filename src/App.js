@@ -25,7 +25,6 @@ function App() {
         pauseOnFocusLoss={false}
         draggable={false}
         pauseOnHover={false}
-        theme={localStorage.getItem("theme")}
       />
       <div className="App dark:bg-gray-900 flex flex-col min-h-screen">
         <Navbar />

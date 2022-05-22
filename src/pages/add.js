@@ -155,7 +155,7 @@ function Add() {
             </div>
             {/* Submit Button */}
             <button
-              className="w-full inline-flex items-center justify-center h-10 px-6 mb-5 font-comic dark:bg-amber-500 hover:dark:bg-amber-700 hover:bg-amber-500 bg-amber-400 text-gray-800 dark:text-gray-100  rounded focus:shadow-outline hover:bg-indigo-800"
+              className="w-full inline-flex items-center justify-center h-10 px-6 mb-5 font-comic dark:bg-amber-500 hover:dark:bg-amber-700 hover:bg-amber-500 bg-amber-400 text-gray-800 dark:text-gray-100  rounded focus:shadow-outline"
               type="submit"
               disabled={isSubmitting}
             >
