@@ -11,6 +11,7 @@ import Error from "../components/error";
 
 //Contexts
 import { useSimpsons } from "../contexts/SimpsonsContext";
+import { toast } from "react-toastify";
 
 function List() {
   //from Context
@@ -36,6 +37,16 @@ function List() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  //If simpsons array is empty because of deletion, show warning for refetching or add new simpson
+  useEffect(() => {
+    !simpsons.length &&
+      !simpsonsLoading &&
+      toast.warn(
+        "If you want to add a simpson, click on the 'Add +' button or refresh the page!",
+        { autoClose: 5000 }
+      );
+  }, [simpsons, simpsonsLoading]);
+
   //Get Simpsons from API and store them in localStorage and Context
   const getSimpsons = async () => {
     try {
@@ -50,9 +61,9 @@ function List() {
   return (
     <>
       <Header header="List" />
-      {simpsonsLoading && <Spinner />}
-      {!simpsons.length && !simpsonsLoading && <Error text="Data Not Found!" />}
       <div>{simpsons && <SimpsonsList />}</div>
+      {!simpsons.length && !simpsonsLoading && <Error text="Data Not Found!" />}
+      {simpsonsLoading && <Spinner />}
     </>
   );
 }

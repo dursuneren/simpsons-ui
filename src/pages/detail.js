@@ -7,6 +7,7 @@ import { useSimpsons } from "../contexts/SimpsonsContext";
 //Components
 import Spinner from "../components/spinner";
 import Error from "../components/error";
+import { toast } from "react-toastify";
 
 function Detail() {
   const { id } = useParams();
@@ -36,8 +37,13 @@ function Detail() {
 
   //If context have simpsons, find simpson by id.
   useEffect(() => {
-    setSimpson(simpsons.find((simpson) => simpson.id === id));
-    setSimpsonLoading(false);
+    if (simpsons.length) {
+      let detailSimpson = simpsons.find((simpson) => simpson.id === id);
+      detailSimpson
+        ? setSimpson(detailSimpson)
+        : toast.error("The person you are looking for was not found!");
+      setSimpsonLoading(false);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [simpsons]);
 

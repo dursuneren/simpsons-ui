@@ -129,3 +129,4 @@ yarn-error.log*
 
 #personal test files
 list-test.js
+detail-test.js
