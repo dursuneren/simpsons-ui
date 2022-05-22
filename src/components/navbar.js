@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/simpsons-logo.png";
 import Switcher from "./switcher";
 
@@ -11,7 +12,13 @@ function Navbar() {
     <nav className="bg-simpsons-blue border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-simpsons-blue-dark">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         {/* Logo */}
-        <img src={logo} className="mr-3 h-12 sm:h-16" alt="The Simpsons Logo" />
+        <Link to={`/`}>
+          <img
+            src={logo}
+            className="mr-3 h-12 sm:h-16"
+            alt="The Simpsons Logo"
+          />
+        </Link>
         {/* Toggle */}
         <button
           onClick={toggle}

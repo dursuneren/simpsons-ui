@@ -7,6 +7,9 @@ import { FaArrowUp, FaArrowDown, FaTrashAlt } from "react-icons/fa";
 //Contexts
 import { useSimpsons } from "../../contexts/SimpsonsContext";
 
+let buttonStyle =
+  "bg-transparent hover:bg-white hover:dark:bg-gray-200 text-gray-400 font-semibold py-2 px-2 border border-blue-500 hover:border-transparent rounded-full";
+
 function SimpsonsList() {
   let navigate = useNavigate();
   const { simpsons, setAllSimpsons } = useSimpsons();
@@ -55,20 +58,23 @@ function SimpsonsList() {
             <div className="grid grid-cols-3 place-items-center">
               {/* Up Button */}
               <button
-                className="text-green-500"
+                className={buttonStyle + " text-green-400"}
                 onClick={() => moveSimpson(index, -1)}
               >
                 <FaArrowUp />
               </button>
               {/* Down Button */}
               <button
-                className="text-red-500"
+                className={buttonStyle + " text-red-400"}
                 onClick={() => moveSimpson(index, 1)}
               >
                 <FaArrowDown />
               </button>
               {/* Delete Button */}
-              <button onClick={() => deleteSimpson(simpson.id)}>
+              <button
+                className={buttonStyle + " text-gray-500"}
+                onClick={() => deleteSimpson(simpson.id)}
+              >
                 <FaTrashAlt />
               </button>
             </div>
