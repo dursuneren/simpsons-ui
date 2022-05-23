@@ -1,5 +1,4 @@
 # The Simpsons
-### Dursun Eren Betuz
 ## Tech
 
 Used Technologies and Packages:
@@ -34,9 +33,12 @@ npm test
 
 ## Screenshots
 
-- List Page
-![My Remote Image](https://i.ibb.co/9gYSZ8Z/1-list.png)
-- Detail Page
-![My Remote Image](https://i.ibb.co/QXswRCF/2-detail.png)
-- Add Page
-![My Remote Image](https://i.ibb.co/5jT3R5x/3-add.png)
+- List Page <br/> <br/> 
+   ![My Remote Image](https://i.ibb.co/9gYSZ8Z/1-list.png)
+- Detail Page <br/> <br/> 
+   ![My Remote Image](https://i.ibb.co/QXswRCF/2-detail.png)
+- Add Page <br/> <br/> 
+   ![My Remote Image](https://i.ibb.co/5jT3R5x/3-add.png)
+   
+## Created by
+- Dursun Eren Betuz
